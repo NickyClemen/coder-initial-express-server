@@ -1,8 +1,8 @@
-const Product = require('./Product');
+const Product = require('../models/Product.model');
 const FileManager = require('./FileManager');
-const errorMessage = require("./errorMessage");
+const errorMessage = require("../../errorMessage");
 
-class ProductManager {
+class ProductService {
     #products;
     #fileManager;
 
@@ -59,6 +59,6 @@ class ProductManager {
     }
 }
 
-module.exports = ProductManager;
+module.exports = ProductService;
 
 
