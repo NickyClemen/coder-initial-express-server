@@ -12,6 +12,8 @@ const MongoConnector = require('./src/database/MongoConnector');
 
 const authRoutes = require('./src/auth');
 
+const errorMiddleware = require('./src/middlewares/error.middleware');
+
 const app = express();
 const router = express.Router();
 
@@ -30,6 +32,8 @@ app.use(cookieParser());
 authRoutes(router);
 
 app.use('/', router);
+
+app.use(errorMiddleware)
 
 const server = app.listen(config.PORT, () => {
     console.log(`server listenning on port ${server.address().port}`);
