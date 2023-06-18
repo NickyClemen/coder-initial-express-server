@@ -1,0 +1,1 @@
+module.exports = (_req, res, _next) => res.render('register', { title: 'Registro' });

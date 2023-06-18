@@ -1,5 +1,6 @@
 const { createConnection } = require('mongoose');
-const config = require('../config');
+
+const config = require('../../config');
 
 module.exports = class MongoConnector {
     static async createConnector() {

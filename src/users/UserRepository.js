@@ -3,6 +3,7 @@ const UserSchema = require('./UserSchema');
 
 module.exports = class UserRepository {
     #userModel;
+
     constructor() {
         this.#userModel = createModel('User', UserSchema);
     }

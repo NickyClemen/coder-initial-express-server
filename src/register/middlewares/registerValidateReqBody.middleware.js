@@ -1,4 +1,4 @@
-const registerJoiSchema = require('../login/validations/login.validations');
+const registerJoiSchema = require('../validations/register.validations');
 
 module.exports = async (req, _res, next) => {
   try {

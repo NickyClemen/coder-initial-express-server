@@ -1,7 +1,8 @@
 const UserRepository = require('./UserRepository');
 
-module.exports = class UserService {
+class UserService {
     #userRepository;
+
     constructor() {
         this.#userRepository = new UserRepository();
     }
@@ -14,3 +15,5 @@ module.exports = class UserService {
         return await this.#userRepository.findByEmail(email);
     }
 }
+
+module.exports = new UserService();

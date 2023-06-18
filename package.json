@@ -11,10 +11,11 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22",
     "passport": "^0.6.0",
-    "passport-http": "^0.3.0"
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0"
   },
   "scripts": {
-    "start:dev": "nodemon app.js"
+    "start:dev": "nodemon server.js"
   },
   "name": "coder-server",
   "version": "1.0.0",

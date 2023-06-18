@@ -1,113 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/index.css">
     <title>{{title}}</title>
   </head>
 
   <body class="is-flex is-justify-content-center is-align-items-center">
-    <section class="section login_section">
-      <div class="container">
-        <form action="/login" method="POST">
-          <div class="field">
-            <label class="label">Nombre</label>
-
-            <div class="control has-icons-left">
-              <input
-                class="input is-success"
-                type="text"
-                placeholder="Ingresá tu nombre"
-                name="first_name"
-              >
-
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Apellido</label>
-
-            <div class="control has-icons-left">
-              <input
-                class="input is-success"
-                type="text"
-                placeholder="Ingresá tu apellido"
-                name="last_name"
-              >
-
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Edad</label>
-
-            <div class="control has-icons-left">
-              <input
-                class="input is-success"
-                type="text"
-                placeholder="Ingresá tu edad"
-                name="age"
-              >
-
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Email</label>
-
-            <div class="control has-icons-left">
-              <input
-                class="input is-success"
-                type="email"
-                placeholder="Ingresá tu email"
-                name="email"
-              >
-
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label" for="">Contraseña</label>
-
-            <div class="control has-icons-left">
-              <input
-                class="input"
-                placeholder="Ingresá tu contraseña"
-                type="password"
-                name="password"
-              >
-
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Enviar</button>
-            </div>
-
-            <div class="control">
-              <button class="button is-link is-light">Cancelar</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+    <h1>Hola</h1>
+    {{ content }}
   </body>
 </html>
