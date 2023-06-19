@@ -12,7 +12,7 @@ class UserService {
     }
 
     async findByEmail(email) {
-        return await this.#userRepository.findByEmail(email);
+        return await this.#userRepository.findBy({ email });
     }
 }
 

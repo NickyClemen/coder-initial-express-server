@@ -9,9 +9,7 @@ const server = app.listen(
     console.log(`server listenning on port ${server.address().port}`);
 
     MongoConnector.createConnector()
-      .then(conn => {
-          if (conn.readyState === 1) console.log('database connection successfuly')
-      })
+      .then(() => console.log('database connection successfuly'))
       .catch(err => console.log(`${err.message}`));
   },
 );

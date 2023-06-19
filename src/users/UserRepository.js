@@ -9,10 +9,10 @@ module.exports = class UserRepository {
     }
 
     async createUser(user) {
-        return this.#userModel.create(user);
+        return await this.#userModel.create(user);
     }
 
     async findBy(textSearch) {
-        return this.#userModel.findBy(textSearch);
+        return await this.#userModel.findOne(textSearch);
     }
 }

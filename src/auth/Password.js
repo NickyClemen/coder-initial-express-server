@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
-
-const config = require('../config');
+const config = require('../../config');
 
 class Password {
   constructor() {

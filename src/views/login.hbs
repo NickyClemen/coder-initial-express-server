@@ -1,0 +1,49 @@
+<section class="section login_section">
+  <div class="container">
+    <form action="/api/login" method="POST">
+      <div class="field">
+        <label class="label">Email</label>
+
+        <div class="control has-icons-left">
+          <input
+            class="input is-success"
+            type="email"
+            placeholder="Ingresá tu email"
+            name="email"
+          >
+
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="">Contraseña</label>
+
+        <div class="control has-icons-left">
+          <input
+            class="input"
+            placeholder="Ingresá tu contraseña"
+            type="password"
+            name="password"
+          >
+
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Enviar</button>
+        </div>
+
+        <div class="control">
+          <button class="button is-link is-light">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

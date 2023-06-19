@@ -1,6 +1,5 @@
-const passport = require('passport');
-
 const registerViewController = require('../controllers/registerView.controller');
+const registerController = require('../controllers/register.controller');
 const registerValidator = require('../middlewares/registerValidateReqBody.middleware');
 
 module.exports = (router) => {
@@ -8,11 +7,6 @@ module.exports = (router) => {
   router.post(
     '/api/register',
     registerValidator,
-    passport.authenticate(
-      'register',
-      {
-        success: '/login',
-      },
-    ),
+    (req, res, next) => registerController(req, res, next),
   );
 }

@@ -6,7 +6,6 @@ module.exports = async (req, _res, next) => {
     await registerJoiSchema.validateAsync(body);
 
     next();
-
   } catch(err) {
     next(err.message);
   }
