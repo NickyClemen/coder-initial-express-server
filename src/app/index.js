@@ -12,9 +12,11 @@ const { engine } = require('express-handlebars');
 const authRoutes = require('../auth');
 const productRoutes = require('../products');
 
-const errorMiddleware = require('./middlewares/error.middleware');
+const ErrorMiddleware = require('./middlewares/error.middleware');
+const AuthMiddleware = require('../auth/middlewares/auth.middleware');
 
 require('../auth/strategies/LoginStrategy');
+require('../auth/strategies/JwtStrategy');
 require('../auth/strategies/RegisterStrategy');
 
 const app = express();
@@ -32,6 +34,8 @@ app.use(
   ),
 );
 
+// app.use(AuthMiddleware);
+
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, '../views'));
@@ -41,6 +45,6 @@ productRoutes(router);
 
 app.use('/', router);
 
-app.use(errorMiddleware);
+app.use(ErrorMiddleware);
 
 module.exports = app;

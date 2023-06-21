@@ -1,5 +1,5 @@
 const createModel = require('../database/Model');
-const UserSchema = require('./UserSchema');
+const UserSchema = require('./User.schema');
 
 module.exports = class UserRepository {
     #userModel;
@@ -13,6 +13,6 @@ module.exports = class UserRepository {
     }
 
     async findBy(textSearch) {
-        return await this.#userModel.findOne(textSearch);
+        return await this.#userModel.find(textSearch);
     }
 }

@@ -1,5 +1,36 @@
-<section class="section login_section">
+<section class="section card_section">
   <div class="container">
-      <h1>Products</h1>
+    <div class="columns is-multiline">
+      {{#each products}}
+        <div class="column is-narrow is-3">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="{{thumbnail}}">
+              </figure>
+            </div>
+
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{{title}}</p>
+                </div>
+              </div>
+
+              <div class="content">
+                <p>{{description}}</p>
+                <p>{{stock}}</p>
+              </div>
+            </div>
+
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Edit</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+          </div>
+        </div>
+      {{/each}}
     </div>
+  </div>
 </section>

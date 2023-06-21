@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local');
 
 const Password = require('../Password');
 
-const userService = require('../../users/UserService');
+const userService = require('../../users/User.service');
 const userMessages = require('../../users/userMessages');
 
 passport.use(

@@ -1,10 +1,8 @@
 const jwt = require('jsonwebtoken');
 const config = require('../../config');
-
 class Jwt {
   #jwtSecret;
   #expiresIn;
-
   constructor() {
     this.#jwtSecret = config.JWT_TOKEN_SECRET;
     this.#expiresIn = { expiresIn: config.JWT_EXPIRES_IN };
@@ -30,6 +28,10 @@ class Jwt {
       this.#jwtSecret,
       this.#expiresIn,
     );
+  }
+
+  async verifyJwt(accessToken) {
+    return await jwt.verify(accessToken, this.#jwtSecret);
   }
 }
 

@@ -16,6 +16,7 @@ class Config {
         this.MONGO_INITDB_ROOT_PASSWORD = process.env.MONGO_INITDB_ROOT_PASSWORD;
         this.MONGO_PORT = process.env.MONGO_PORT;
         this.MONGO_URI = `mongodb://${ this.MONGO_INITDB_ROOT_USERNAME }:${ this.MONGO_INITDB_ROOT_PASSWORD }@${ this.MONG_BASE_URL }:${ this.MONGO_PORT }/${ this.MONGO_INITDB_DATABASE }`;
+        this.NODE_DEV = process.env.NODE_ENV;
     }
 }
 
