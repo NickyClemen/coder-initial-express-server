@@ -1,4 +1,4 @@
-db = db.getSiblingDB('coderhouse');
+db = db.getSiblingDB(process.env.MONGO_INITDB_DATABASE);
 
 db.createUser(
   {
@@ -13,16 +13,16 @@ db.createUser(
   }
 );
 
-db.createCollection('users');
+db.createCollection(process.env.USER_COLLECTION);
 
 db.users.insertMany([
   {
-    first_name: 'Nicole',
-    last_name: 'Ordoqui',
-    age: '32',
-    role: 'admin',
-    password: '123456',
-    email: 'nicole.ordoqui@gmail.com',
+    first_name: process.env.USER_ADMIN_FIRST_NAME,
+    last_name: process.env.USER_ADMIN_LAST_NAME,
+    age: String(process.env.USER_ADMIN_AGE),
+    role: process.env.USER_ADMIN_ROLE,
+    password: process.env.USER_ADMIN_PASSWORD,
+    email: process.env.USER_ADMIN_EMAIL,
   }
 ]);
 
